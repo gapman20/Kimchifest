@@ -1,0 +1,135 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    padding: 90px 20px 0;
+}
+/* Header */
+
+.header{
+    background: rgb(34,63,146);
+    background: linear-gradient(90deg, rgba(34,63,146,1) 25%, rgba(214,11,81,1) 33%, rgba(92,44,122,1) 95%);
+    height: 64px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+
+.logo-img{
+    width: 200px;
+    height: 64px; 
+}
+
+.nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 64px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.nav-menu-link{
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.nav-menu-link:hover{
+    background-color: #D60B51;
+    transition: 0.5s;
+}
+
+.nav-toggle{
+    color: white;
+    background: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 40px;
+    display: none;
+    cursor: pointer;
+}
+
+/* Celular */
+
+@media (max-width: 768px){
+    body{
+        padding-top: 70px;
+    }
+    .header{
+        background: rgb(34,63,146);
+        background: linear-gradient(90deg, rgba(34,63,146,1) 10%, rgba(214,11,81,1) 20%, rgba(92,44,122,1) 95%);
+        height: 44px;
+    }
+    
+    .logo-img{
+        width: 150px;
+        height: 44px; 
+    }
+    
+    .nav-menu{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background-color: #D60B51;
+        position: fixed;
+        left: 0;
+        top: 44px;
+        width: 100%;
+        padding: 20px 0;
+
+        height: calc(100% - 44px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+    }
+    
+    .nav-menu-item{
+        line-height: 70px;
+    }
+    
+    
+    .nav-menu-link:hover
+    .nav-menu-link_active{
+        background: none;
+        color: #223f92;
+    }
+
+    .nav-toggle{
+        display: block;
+        height: 44px;
+        border: none;
+    }
+
+    .nav-menu_visible{
+        left: 0;
+    }
+
+    .nav-toggle:focus:not(:focus-visible){
+        outline: none;
+    }
+}
